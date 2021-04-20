@@ -7,18 +7,18 @@ const todos = [];
 const todo = {
     comment: '',
     status: '作業中'
-}
+};
 
 const output = document.getElementById('output');
 
 //関数addTask
 const addTask = () => {
     const input = document.getElementById('input').value;
-    todo.comment = input
+    todo.comment = input;
     todos.push(todo);
     displayTodos(todo);
     num++
-}
+};
 
 //関数displayTodos
 const displayTodos = (todo) => {
@@ -26,20 +26,20 @@ const displayTodos = (todo) => {
     list.textContent = num;
 
     const th = document.createElement('td');
-    th.textContent = todo.comment
+    th.textContent = todo.comment;
     input.value = '';
 
     const Status = () => {
-        const StatusButton = document.createElement('button');
-        StatusButton.textContent = todo.status
-        return StatusButton;
-    }
+        const changeStatus = document.createElement('button');
+        changeStatus.textContent = todo.status;
+        return changeStatus;
+    };
 
     const Delete = () => {
-        const DeleteButton = document.createElement('button');
-        DeleteButton.textContent = '削除'
-        return DeleteButton;
-    }
+        const changeDelete = document.createElement('button');
+        changeDelete.textContent = '削除';
+        return changeDelete;
+    };
 
 
 
