@@ -44,12 +44,13 @@ const displayTodos = (todo) => {
 
 
     const table = document.getElementById('new-task');
+    
     const tr = document.createElement('tr');
     table.appendChild(tr);
-    table.appendChild(list);
-    table.appendChild(th);
-    table.appendChild(Status());
-    table.appendChild(Delete());
+    tr.appendChild(list);
+    tr.appendChild(th);
+    tr.appendChild(Status());
+    tr.appendChild(Delete());
 };
 
 output.addEventListener('click', addTask,);
